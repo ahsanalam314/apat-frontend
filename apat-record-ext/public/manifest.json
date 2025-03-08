@@ -1,0 +1,26 @@
+{
+  "name": "APAT Recorder",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icons/pencil16.png",
+      "48": "assets/icons/pencil48.png",
+      "128": "assets/icons/pencil128.png"
+    }
+  },
+  "background": {
+    "service_worker": "assets/background.js"
+  },
+  "permissions": ["activeTab", "storage", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["assets/content.js"],
+      "run_at": "document_start"
+    }
+  ]
+
+}
