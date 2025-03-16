@@ -3,19 +3,23 @@
   "name": "Automated UI Test Recorder",
   "version": "1.0",
   "description": "Records user interactions for automated UI testing",
-  "permissions": ["activeTab", "scripting", "storage"],
+  "permissions": [ "tabs",
+  "scripting",
+  "storage",
+  "activeTab"],
   "background": {
-    "service_worker": "assets/background.js"
+    "service_worker": "background.js"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["assets/content.js"]
+      "js": ["content.js"],
+      "run_at": "document_idle"
     }
   ],
   "host_permissions": ["<all_urls>"],
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "popup/popup.html",
     "default_icon": {
       "16": "assets/icons/pencil16.png",
       "48": "assets/icons/pencil48.png",
@@ -24,7 +28,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["assets/test-runner.js"],
+      "resources": ["test-runner.js"],
       "matches": ["<all_urls>"]
     }
   ]

@@ -1,0 +1,42 @@
+{
+  "sessionId": "abcd-1234-efgh-5678",
+  "testName": "User Journey - Signup",
+  "timestamp": "2025-03-03T12:34:56.789Z",
+  "events": [
+    {
+      "eventId": "evt-001",
+      "eventType": "click",
+      "element": {
+        "tag": "button",
+        "id": "signupBtn",
+        "classList": ["btn", "btn-success"],
+        "name": null,
+        "text": "Sign Up",
+        "href": null,
+        "value": null,
+        "checked": null,
+        "attributes": { "type": "submit", "data-test": "signup-button" },
+        "xpath": "//button[@id='signupBtn']",
+        "selector": "#signupBtn"
+      },
+      "timestamp": "2025-03-03T12:34:56.789Z",
+      "additionalData": { "mouseButton": "left" }
+    },
+    {
+      "eventId": "evt-002",
+      "eventType": "input",
+      "element": {
+        "tag": "input",
+        "id": "email",
+        "classList": ["form-control"],
+        "name": "email",
+        "value": "testuser@example.com",
+        "attributes": { "type": "email", "placeholder": "Enter email" },
+        "xpath": "//input[@id='email']",
+        "selector": "#email"
+      },
+      "timestamp": "2025-03-03T12:34:58.123Z",
+      "additionalData": { "key": "e", "keyCode": 69 }
+    }
+  ]
+}
